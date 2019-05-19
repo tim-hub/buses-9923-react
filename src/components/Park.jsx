@@ -11,7 +11,6 @@ function Square(props) {
 class Park extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { buses: props.buses };
   }
   renderSquare(symbol) {
     return <Square value={symbol} />;
@@ -26,11 +25,11 @@ class Park extends React.Component {
   }
 
   renderARow(y) {
-    console.log(this.state.buses);
+    console.log(this.props.buses);
     const places = [];
     for (let i = 0; i < 5; i++) {
       let symbol = " ";
-      const bus = this.state.buses.find(x => {
+      const bus = this.props.buses.find(x => {
         return x.x === i && x.y === y;
       });
       if (bus) {

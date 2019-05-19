@@ -10,11 +10,11 @@ class Dashboard extends React.Component {
       y: 0,
       facing: "NORTH",
       engine: the_park,
-      buses: the_park.buses
+      buses: []
     };
   }
   setBuses() {
-    this.state.setState(the_park.buses);
+    this.setState({buses:the_park.buses});
   }
   render() {
     return (
