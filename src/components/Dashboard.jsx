@@ -10,7 +10,8 @@ class Dashboard extends React.Component {
       y: 0,
       facing: "NORTH",
       engine: the_park,
-      buses: []
+      buses: [],
+      show_report: true
     };
   }
   setBuses() {
@@ -63,7 +64,6 @@ class Dashboard extends React.Component {
           <button
             className="command"
             onClick={() => {
-              // console.log("move clicked");
               this.state.engine.place(
                 this.state.x,
                 this.state.y,
@@ -80,12 +80,39 @@ class Dashboard extends React.Component {
           <button
             className="command"
             onClick={() => {
-              // console.log("move clicked");
               this.state.engine.move();
               this.setBuses();
             }}
           >
             Move
+          </button>
+          <button
+            className="command"
+            onClick={() => {
+              this.state.engine.left();
+              this.setBuses();
+            }}
+          >
+            Turn Left
+          </button>
+          <button
+            className="command"
+            onClick={() => {
+              this.state.engine.right();
+              this.setBuses();
+            }}
+          >
+            Turn Right
+          </button>
+          <button
+            className="command"
+            disabled = {!this.state.show_report}
+            onClick={() => {
+              alert('Do not need to click `Report` button, because result is displayed in UI after data changing.');
+              this.setState({show_report: false});
+            }}
+          >
+            Report
           </button>
         </div>
       </div>
