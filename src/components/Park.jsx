@@ -9,14 +9,11 @@ function Square(props) {
 }
 
 class Park extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   renderSquare(symbol) {
     return <Square value={symbol} />;
   }
 
-  getSymbol(direction) {
+  getBusSymbol(direction) {
     if (direction === "NORTH") return "^";
     else if (direction === "EAST") return ">";
     else if (direction === "SOUTH") return "v";
@@ -34,7 +31,7 @@ class Park extends React.Component {
       });
       if (bus) {
         console.log("found");
-        symbol = this.getSymbol(bus.facing);
+        symbol = this.getBusSymbol(bus.facing);
       }
       places.push(this.renderSquare(symbol));
     }
@@ -52,9 +49,6 @@ class Park extends React.Component {
       </div>
     );
   }
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return true;
-  // }
 }
 
 export default Park;
