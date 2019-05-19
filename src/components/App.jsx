@@ -11,8 +11,8 @@ class App extends React.Component {
     return (
       <div className="app">
         <h1>A Bus Park</h1>
-        <h2>Try Give Some Commands To Run!</h2>
-        <Park squares={[]} onClick={i => console.log("x")} />
+        <b>Try Give Some Commands To Run!</b>
+        <Park />
         <hr />
         <Dashboard commands={the_park} />
       </div>
