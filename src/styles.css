@@ -29,7 +29,6 @@ body {
   display: block;
   width: 80px;
   height: 80px;
-  color: #dbdf0f;
   font-size: 4em;
   font-weight: 100;
   text-align: center;
@@ -91,10 +90,9 @@ body {
 
 .command {
   display: block;
-  width: 80px;
+  width: 95px;
   height: 40px;
-  font-size: 1em;
-  font-weight: 100;
+  font-size: 0.8em;
   text-align: center;
   padding: 2px;
   cursor: pointer;
