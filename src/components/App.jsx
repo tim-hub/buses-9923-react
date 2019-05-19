@@ -1,7 +1,5 @@
 import React from "react";
-import Park from "./Park";
 import Dashboard from "./Dashboard";
-import { the_park } from "../util/park";
 
 class App extends React.Component {
   constructor(props) {
@@ -12,9 +10,8 @@ class App extends React.Component {
       <div className="app">
         <h1>A Bus Park</h1>
         <b>Try Give Some Commands To Run!</b>
-        <Park />
-        <hr />
-        <Dashboard commands={the_park} />
+
+        <Dashboard />
       </div>
     );
   }

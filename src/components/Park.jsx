@@ -1,5 +1,4 @@
 import React from "react";
-import { the_park } from "../util/park";
 
 function Square(props) {
   return (
@@ -12,7 +11,7 @@ function Square(props) {
 class Park extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { buses: the_park.buses };
+    this.state = { buses: props.buses };
   }
   renderSquare(symbol) {
     return <Square value={symbol} />;
@@ -27,22 +26,18 @@ class Park extends React.Component {
   }
 
   renderARow(y) {
-    const places = [];
     console.log(this.state.buses);
-
+    const places = [];
     for (let i = 0; i < 5; i++) {
-      console.log(i + ` ` + y);
-
-      const containing = false;
-      containing = this.state.buses.map(bus => {
-        if (bus.x === i && bus.y === y) {
-          places.push(this.renderSquare(this.getSymbol(bus.facing)));
-          return true;
-        }
+      let symbol = " ";
+      const bus = this.state.buses.find(x => {
+        return x.x === i && x.y === y;
       });
-      if (containing !== true) {
-        places.push(this.renderSquare("*"));
+      if (bus) {
+        console.log("found");
+        symbol = this.getSymbol(bus.facing);
       }
+      places.push(this.renderSquare(symbol));
     }
     return places;
   }
@@ -58,9 +53,9 @@ class Park extends React.Component {
       </div>
     );
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return true;
+  // }
 }
 
 export default Park;

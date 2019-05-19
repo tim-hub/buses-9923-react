@@ -1,4 +1,6 @@
 import React from "react";
+import Park from "./Park";
+import { the_park } from "../util/park";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -6,12 +8,19 @@ class Dashboard extends React.Component {
     this.state = {
       x: 0,
       y: 0,
-      facing: "NORTH"
+      facing: "NORTH",
+      engine: the_park,
+      buses: the_park.buses
     };
+  }
+  setBuses() {
+    this.state.setState(the_park.buses);
   }
   render() {
     return (
       <div>
+        <Park buses={this.state.buses} />
+        <hr />
         <div className="board-row">
           <select
             className="command"
@@ -55,14 +64,14 @@ class Dashboard extends React.Component {
             className="command"
             onClick={() => {
               // console.log("move clicked");
-              this.props.commands.place(
+              this.state.engine.place(
                 this.state.x,
                 this.state.y,
                 this.state.facing
               );
+              this.setBuses();
             }}
           >
-            {" "}
             Place
           </button>
         </div>
@@ -72,7 +81,8 @@ class Dashboard extends React.Component {
             className="command"
             onClick={() => {
               // console.log("move clicked");
-              this.props.commands.move();
+              this.state.engine.move();
+              this.setBuses();
             }}
           >
             Move
