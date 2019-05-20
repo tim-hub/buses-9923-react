@@ -63,25 +63,11 @@ body {
   border-left: 5px solid rgba(13, 161, 146, 0.5);
 }
 
-.playerX {
-  color: rgb(84, 84, 84);
-}
-
-.playerO {
-  color: rgb(242, 235, 211);
-}
-
-.game-status {
-  width: auto;
-  height: 32px;
-  color: #f8f8f8;
+.log {
+  width: 320px;
+  height: auto;
   padding: 0 10px;
   transition: 0.3s all;
-}
-
-.title {
-  transition: 0.3s all;
-  text-align: center;
 }
 
 .app {

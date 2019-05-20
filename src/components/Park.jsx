@@ -22,7 +22,6 @@ class Park extends React.Component {
   }
 
   renderARow(y) {
-    console.log(this.props.buses);
     const places = [];
     for (let i = 0; i < 5; i++) {
       let symbol = " ";
@@ -30,7 +29,6 @@ class Park extends React.Component {
         return x.x === i && x.y === y;
       });
       if (bus) {
-        console.log("found");
         symbol = this.getBusSymbol(bus.facing);
       }
       places.push(this.renderSquare(symbol));
