@@ -1,6 +1,9 @@
 import React from "react";
 import Park from "./Park";
+import Log from "./Log";
 import { the_park } from "../util/park";
+import logger from "../util/logger";
+
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -11,7 +14,8 @@ class Dashboard extends React.Component {
       facing: "NORTH",
       engine: the_park,
       buses: [],
-      show_report: true
+      show_report: true,
+      show_log: false,
     };
   }
   setBuses() {
@@ -115,6 +119,20 @@ class Dashboard extends React.Component {
             Report
           </button>
         </div>
+        <hr />
+        <div className="board-row">
+          <button
+            className="command"
+            onClick={() => {
+              this.setState({show_log: !this.state.show_log});
+            }}
+          >
+            Toggle Log
+          </button>
+        </div>
+        <hr/>
+        {this.state.show_log ?<Log logs={logger.logs}></Log>:null }
+
       </div>
     );
   }
