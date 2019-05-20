@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.dfc67906.chunk.css",
-  "main.js": "/static/js/main.6681421e.chunk.js",
-  "main.js.map": "/static/js/main.6681421e.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.8b22bbb6.chunk.js": "/static/js/2.8b22bbb6.chunk.js",
-  "static/js/2.8b22bbb6.chunk.js.map": "/static/js/2.8b22bbb6.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.ea451b707fa9759da41df16ecf8a68b8.js": "/precache-manifest.ea451b707fa9759da41df16ecf8a68b8.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.dfc67906.chunk.css.map": "/static/css/main.dfc67906.chunk.css.map"
+  "main.css": "/buses-9923-react/static/css/main.dfc67906.chunk.css",
+  "main.js": "/buses-9923-react/static/js/main.6681421e.chunk.js",
+  "main.js.map": "/buses-9923-react/static/js/main.6681421e.chunk.js.map",
+  "runtime~main.js": "/buses-9923-react/static/js/runtime~main.fbc39772.js",
+  "runtime~main.js.map": "/buses-9923-react/static/js/runtime~main.fbc39772.js.map",
+  "static/js/2.8b22bbb6.chunk.js": "/buses-9923-react/static/js/2.8b22bbb6.chunk.js",
+  "static/js/2.8b22bbb6.chunk.js.map": "/buses-9923-react/static/js/2.8b22bbb6.chunk.js.map",
+  "index.html": "/buses-9923-react/index.html",
+  "precache-manifest.5c9e03c9ad7d3a062ab3b4cde5c5b43a.js": "/buses-9923-react/precache-manifest.5c9e03c9ad7d3a062ab3b4cde5c5b43a.js",
+  "service-worker.js": "/buses-9923-react/service-worker.js",
+  "static/css/main.dfc67906.chunk.css.map": "/buses-9923-react/static/css/main.dfc67906.chunk.css.map"
 }
