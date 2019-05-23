@@ -1,6 +1,5 @@
 {
-  "name": "new",
-  "homepage": "http://tim.bai.uno/buses-9923-react/",
+  "name": "buses-react-demo",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -17,12 +16,14 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy-gh": "gh-pages -d build",
+    "deploy-aws": "aws s3 sync build/ s3://app-20190523"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "http://app-20190523.s3-website-ap-southeast-2.amazonaws.com/"
 }
